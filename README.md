@@ -24,7 +24,44 @@
         RUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
     systemctl set-default graphical-target  #切换图形界面，换回文本界面是 systemctl set-default multi-user.target
 
-5、
+5、安装pve.iso后安装windows的引导  （本人测试未通过，菜单提示签名无效signity invalid）
+    https://post.smzdm.com/p/awzzqlep/  实战PVE：N5095 Win+PVE双系统安装，手把手教到会
+    d) GRUB复原Windows开机选项
+安装完pve后，开机GRUB选项里Windows开机选项会消失，可修改Grub，加入Windows开机选项。
+
+lsblk
+
+确认windows boot efi挂载在哪个sdX，再输入
+
+sudo cfdisk /dev/sdX <-自己的X （无数字）
+
+我的是安装在sdb我的是安装在sdb
+
+把EFI System的UUID记下来把EFI System的UUID记下来
+
+nano /etc/grub.d/40_custom
+
+贴上并填入UUID
+
+menuentry 'Windows 11' {
+
+    search --fs-uuid --no-floppy --set=root <填入UUID>
+
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+
+}
+
+实战PVE：N5095 Win+PVE双系统安装，手把手教到会
+
+存档退出
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+update-grub
+
+重启就可以见到Windows开机选项了
+
+e）
 
 
 
