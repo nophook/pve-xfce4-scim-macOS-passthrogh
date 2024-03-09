@@ -14,6 +14,33 @@
 
     b／c任一方案都可以，交叉组合也可以（我用b的recovery-ventura.iso,800M,配合c的OpenCore-v20.iso,157M），最终建议用b，脚本自动建好虚拟机和磁盘
     c通过dmg2img获得的basesystem.iso有3.2G，而b就是dmg的800M。
+    
+    参考配置 nano /etc/pve/qemu-server/101.conf
+agent: 1
+args: -device isa-applesmc,osk="ourhardworkbythesewordsguardedpleasedontsteal(c>
+bios: ovmf
+boot: order=virtio0;ide2
+cores: 4
+cpu: x86-64-v2-AES
+ide1: local:iso/recovery-ventura.iso,cache=unsafe,size=800M
+ide2: local:iso/OpenCore-v20.iso,cache=unsafe,size=150M
+machine: q35
+memory: 4096
+meta: creation-qemu=8.1.5,ctime=1709918034
+name: Hack-KVM-Ventura
+net0: virtio=BC:24:11:0B:7F:11,bridge=vmbr0,firewall=1
+numa: 0
+ostype: other
+scsihw: virtio-scsi-pci
+smbios1: uuid=32392240-565e-4c3c-b9b0-305593701900
+sockets: 1
+vga: virtio
+virtio0: local-lvm:vm-101-disk-0,cache=unsafe,iothread=1,size=64G
+vmgenid: e0a80d34-4ace-4495-a11d-a8a4b69a9a67
+
+
+
+
 
 4、pve安装桌面及汉化
     apt install xfce4 scim-pinyin
