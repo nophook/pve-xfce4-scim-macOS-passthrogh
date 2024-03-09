@@ -11,7 +11,9 @@
     ![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/3b2f3403-d02e-4681-a458-850880e76b32)
 
 3、方案建议
+
     b／c任一方案都可以，交叉组合也可以（我用b的recovery-ventura.iso,800M,配合c的OpenCore-v20.iso,157M），最终建议用b，脚本自动建好虚拟机和磁盘
+    c通过dmg2img获得的basesystem.iso有3.2G，而b就是dmg的800M。
 
 4、pve安装桌面及汉化
     apt install xfce4 scim-pinyin
@@ -26,6 +28,7 @@
 
 5、安装pve.iso后安装windows的引导  （本人测试未通过，菜单提示签名无效signity invalid）
     https://post.smzdm.com/p/awzzqlep/  实战PVE：N5095 Win+PVE双系统安装，手把手教到会
+
     d) GRUB复原Windows开机选项
 安装完pve后，开机GRUB选项里Windows开机选项会消失，可修改Grub，加入Windows开机选项。
 
@@ -38,6 +41,7 @@ sudo cfdisk /dev/sdX <-自己的X （无数字）
 我的是安装在sdb我的是安装在sdb
 
 把EFI System的UUID记下来把EFI System的UUID记下来
+![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/5cc98100-7f74-455a-92d2-a52c6d252dff)
 
 nano /etc/grub.d/40_custom
 
@@ -61,7 +65,7 @@ update-grub
 
 重启就可以见到Windows开机选项了
 
-e）
+
 
 
 
