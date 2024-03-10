@@ -71,7 +71,7 @@
     我的是安装在sdb我的是安装在sdb
     
     把EFI System的UUID记下来把EFI System的UUID记下来
-    ![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/5cc98100-7f74-455a-92d2-a52c6d252dff)
+![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/5cc98100-7f74-455a-92d2-a52c6d252dff)
     
     nano /etc/grub.d/40_custom
     
