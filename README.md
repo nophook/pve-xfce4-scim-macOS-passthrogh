@@ -12,7 +12,7 @@
     d. https://www.sqlsec.com/2022/04/pve.html  国光的 PVE 生产环境配置优化记录
 
 2、nano /etc/hosts  选取任一ip写入hosts即可
-    ![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/3b2f3403-d02e-4681-a458-850880e76b32)
+![image](https://github.com/nophook/pve-xfce4-scim-macOS-passthrogh/assets/113235819/3b2f3403-d02e-4681-a458-850880e76b32)
 
 3、方案建议
 
