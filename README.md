@@ -5,6 +5,7 @@
 
 
 1、参考资料3份：
+
     a. https://blog.csdn.net/weixin_44293949/article/details/121863559 解决raw.githubusercontent.com无法访问的问题 
     b. https://github.com/luchina-gabriel/OSX-PROXMOX Run macOS on ANY Computer - AMD & Intel
     c. https://github.com/kholia/OSX-KVM  Run macOS on QEMU/KVM. With OpenCore + Monterey + Ventura + Sonoma support now!
