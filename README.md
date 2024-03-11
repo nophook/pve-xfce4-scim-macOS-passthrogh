@@ -48,10 +48,11 @@
 
 
 4、pve安装桌面及汉化
-    apt install xfce4 scim-pinyin
-    根据依赖会自动安装其他组件。
+
+    apt install xfce4 scim-pinyin    根据依赖会自动安装其他组件。
     Applications -- Settings -- Appearence -- Fonts -- Default Font 选正体中文字体，我是选的WenQuanYi Micro Hei Regular，效果类似新宋。
     scim套件安装仅130M，比较节约。
+    从网上下载opera安装。
 
     切换图形桌面配套：
     nano /etc/default/grub
