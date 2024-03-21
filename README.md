@@ -89,7 +89,9 @@
 
     如果出现invalid signature提示，则使用winpe启动，用bootice重写主引导（对，主引导nt6）。
     
-
+6、排错
+   1. 核显直通调试黑屏、无登录界面、lightdm.service：删除/etc/modprobe.d/blacklist.conf或者改名blacklist.conf1，然后update-initramfs -u -k all；/etc/default/grub中删除或注释掉video=相关配置,update-grub；然后reboot
+   2. 
 
 
 
